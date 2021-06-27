@@ -6,6 +6,14 @@ using System.Windows.Forms;
 
 namespace Ze_Starve
 {
+    public class Login
+    {
+        string NamaDepan { set; get; }
+        string NamaBelakang { set; get; }
+        string Username { set; get; }
+        string Password { set; get; }
+        string DaftarSebagai { set; get; }
+    }
     static class Program
     {
         /// <summary>
@@ -16,7 +24,7 @@ namespace Ze_Starve
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new LoginForm());
         }
     }
 }

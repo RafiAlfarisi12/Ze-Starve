@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Ze_Starve
 {
-    public partial class Form1 : Form
+    public partial class DaftarAkunPenerima : Form
     {
-        public Form1()
+        public DaftarAkunPenerima()
         {
             InitializeComponent();
         }
