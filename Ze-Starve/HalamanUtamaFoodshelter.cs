@@ -31,5 +31,36 @@ namespace Ze_Starve
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnFoodshelter_Click(object sender, EventArgs e)
+        {
+            LblSelectedFoodshelter.Visible = true;
+            LblSelectedNotifikasi.Visible = false;
+            LblSelectedAkun.Visible = false;
+        }
+
+        private void BtnNotifikasi_Click(object sender, EventArgs e)
+        {
+            LblSelectedFoodshelter.Visible = false;
+            LblSelectedNotifikasi.Visible = true;
+            LblSelectedAkun.Visible = false;
+        }
+
+        private void BtnAkun_Click(object sender, EventArgs e)
+        {
+            LblSelectedFoodshelter.Visible = false;
+            LblSelectedNotifikasi.Visible = false;
+            LblSelectedAkun.Visible = true;
+        }
+
+        private void HalamanUtamaFoodshelter_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

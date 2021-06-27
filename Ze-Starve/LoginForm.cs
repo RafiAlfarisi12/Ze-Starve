@@ -29,19 +29,19 @@ namespace Ze_Starve
         {
             DataTable table = new DataTable();
             MySqlDataAdapter adapter = new MySqlDataAdapter();
-            MySqlCommand command = new MySqlCommand("SELECT username, password, daftar_sebagai FROM pengguna WHERE username = '" + txtUsername.Text + "' AND password = '" + txtPassword.Text + "'", db.GetConnection());
+            MySqlCommand command = new MySqlCommand("SELECT username, password, DaftarSebagai FROM pengguna WHERE username = '" + txtUsername.Text + "' AND password = '" + txtPassword.Text + "'", db.GetConnection());
             adapter.SelectCommand = command;
             adapter.Fill(table);
             if (table.Rows.Count > 0)
             {
                 foreach (DataRow dr in table.Rows)
                 {
-                    if (dr["daftar_sebagai"].ToString() == "Foodshelter")
+                    if (dr["DaftarSebagai"].ToString() == "Foodshelter")
                     {
                         new HalamanUtamaFoodshelter().Show();
                         this.Hide();
                     }
-                    else if (dr["daftar_sebagai"].ToString() == "Donatur")
+                    else if (dr["DaftarSebagai"].ToString() == "Donatur")
                     {
                         new HalamanUtamaDonatur().Show();
                         this.Hide();
