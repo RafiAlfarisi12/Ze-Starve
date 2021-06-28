@@ -35,3 +35,5 @@ D:\Ze-Starve\Ze-Starve\obj\Debug\Ze_Starve.HalamanUtamaFoodshelter.resources
 D:\Ze-Starve\Ze-Starve\obj\Debug\Ze_Starve.DaftarAkun.resources
 D:\Ze-Starve\Ze-Starve\obj\Debug\Ze_Starve.DaftarAkunFoodshelter.resources
 D:\Ze-Starve\Ze-Starve\obj\Debug\Ze_Starve.DaftarAkunDonatur.resources
+D:\Ze-Starve\Ze-Starve\obj\Debug\Ze_Starve.DaftarAkunPenerima.resources
+D:\Ze-Starve\Ze-Starve\obj\Debug\Ze_Starve.TambahAktivitasFoodshelter.resources

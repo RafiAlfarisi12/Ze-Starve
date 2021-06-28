@@ -209,9 +209,9 @@ namespace Ze_Starve
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Ze_Starve.Properties.Resources.logoZStarve01;
-            this.pictureBox1.Location = new System.Drawing.Point(8, 110);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 103);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(291, 298);
+            this.pictureBox1.Size = new System.Drawing.Size(291, 275);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 35;
             this.pictureBox1.TabStop = false;

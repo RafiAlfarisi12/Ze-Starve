@@ -150,6 +150,9 @@
     <EmbeddedResource Include="DaftarAkunFoodshelter.resx">
       <DependentUpon>DaftarAkunFoodshelter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DaftarAkunPenerima.resx">
+      <DependentUpon>DaftarAkunPenerima.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HalamanUtamaFoodshelter.resx">
       <DependentUpon>HalamanUtamaFoodshelter.cs</DependentUpon>
     </EmbeddedResource>
@@ -166,6 +169,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TambahAktivitasFoodshelter.resx">
+      <DependentUpon>TambahAktivitasFoodshelter.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

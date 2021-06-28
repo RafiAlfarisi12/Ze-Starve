@@ -16,5 +16,10 @@ namespace Ze_Starve
         {
             InitializeComponent();
         }
+
+        private void DaftarAkunPenerima_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

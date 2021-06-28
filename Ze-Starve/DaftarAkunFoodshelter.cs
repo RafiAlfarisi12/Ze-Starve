@@ -15,11 +15,21 @@ namespace Ze_Starve
     public partial class DaftarAkunFoodshelter : Form
     {
         KoneksiDatabase db = new KoneksiDatabase();
+
+        int IdFoodshelter { set; get; }
+        int IdPengguna { set; get; }
+        string NamaFoodshelter { set; get; }
+        string NoTelpFoodshelter { set; get; }
+        string AlamatFoodshelter { set; get; }
+        string NoRekeningFoodshelter { set; get; }
+        byte FotoLogoFoodshelter { set; get; }
+        byte FotoBukuTabungan { set; get; }
+        byte FotoKtp { set; get; }
+
         public DaftarAkunFoodshelter()
         {
             InitializeComponent();
         }
-
         private void DaftarAkunFoodshelter_Load(object sender, EventArgs e)
         {
 
@@ -59,11 +69,8 @@ namespace Ze_Starve
         {
             MemoryStream ms = new MemoryStream();
             byte[] imgLogoFooodShelter = ms.ToArray();
-
             byte[] imgBukuTabungan = ms.ToArray();
-
             byte[] imgKtp = ms.ToArray();
-
             
             MySqlCommand command = new MySqlCommand("INSERT INTO penggunafoodshelter (NamaFoodshelter, NoTelpFoodshelter, AlamatFoodshelter, NoRekeningFoodshelter, DeskripsiFoodshelter, FotoLogoFoodshelter, FotoBukuTabungan, FotoKtp) VALUES (@NamaFoodshelter, @NoTelpFoodshelter, @AlamatFoodshelter, @NoRekeningFoodshelter, @DeskripsiFoodshelter, @FotoLogoFoodshelter, @FotoBukuTabungan, @FotoKtp)", db.GetConnection());
             

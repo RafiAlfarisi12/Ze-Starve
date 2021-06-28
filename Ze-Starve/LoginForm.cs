@@ -20,12 +20,7 @@ namespace Ze_Starve
             InitializeComponent();
         }
 
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        protected void BtnLogin_Click(object sender, EventArgs e)
+        public void Login()
         {
             DataTable table = new DataTable();
             MySqlDataAdapter adapter = new MySqlDataAdapter();
@@ -52,6 +47,15 @@ namespace Ze_Starve
             {
                 MessageBox.Show("Username atau Password salah!");
             }
+        }
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnLogin_Click(object sender, EventArgs e)
+        {
+            Login();
         }
 
         private void BtnDaftarAkun_Click(object sender, EventArgs e)

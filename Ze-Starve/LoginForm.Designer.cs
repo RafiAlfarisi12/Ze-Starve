@@ -37,8 +37,8 @@ namespace Ze_Starve
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.LblLogin = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnLogin = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,16 +119,6 @@ namespace Ze_Starve
             this.LblLogin.TabIndex = 11;
             this.LblLogin.Text = "LOGIN";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Ze_Starve.Properties.Resources.logoZStarve01;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 35);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(357, 357);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // BtnLogin
             // 
             this.BtnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -139,6 +129,16 @@ namespace Ze_Starve
             this.BtnLogin.Text = "Login";
             this.BtnLogin.UseVisualStyleBackColor = true;
             this.BtnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Ze_Starve.Properties.Resources.logoZStarve01;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 35);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(357, 357);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // LoginForm
             // 

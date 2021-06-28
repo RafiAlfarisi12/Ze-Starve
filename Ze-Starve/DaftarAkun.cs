@@ -1,20 +1,22 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.OleDb;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Ze_Starve
 {
     public partial class DaftarAkun : Form
     {
-        string username { set; get; }
+        public class Login
+        {
+            int IdPengguna { set; get; }
+            string Username { set; get; }
+            string Password { set; get; }
+            string NamaDepan { set; get; }
+            string NamaBelakang { set; get; }
+            string DaftarSebagai { set; get; }
+        };
 
         KoneksiDatabase db = new KoneksiDatabase();
 
@@ -25,11 +27,6 @@ namespace Ze_Starve
         OleDbConnection con = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=db_users.mdb");
         OleDbCommand cmd = new OleDbCommand();
         OleDbDataAdapter da = new OleDbDataAdapter();
-
-        private void DaftarAkun_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void Btn_Selanjutnya_In_Daftar_Akun_Click(object sender, EventArgs e)
         {
@@ -51,14 +48,13 @@ namespace Ze_Starve
             else if (Rbutton_Input_Foodshelter.Checked)
             {
                 Sebagai = "Foodshelter";
-                new DaftarAkunFoodshelter().Show();
                 this.Hide();
             }
-            command.Parameters.Add("@Username", MySqlDbType.VarChar).Value = txtUsername.Text;
-            command.Parameters.Add("@Password", MySqlDbType.VarChar).Value = txtPassword.Text;
-            command.Parameters.Add("@NamaDepan", MySqlDbType.VarChar).Value = txtNamaDepan.Text;
-            command.Parameters.Add("@NamaBelakang", MySqlDbType.VarChar).Value = txtNamaBelakang.Text;
-            command.Parameters.Add("@DaftarSebagai", MySqlDbType.VarChar).Value = Sebagai;
+            command.Parameters.Add("Username", MySqlDbType.VarChar).Value = txtUsername.Text;
+            command.Parameters.Add("Password", MySqlDbType.VarChar).Value = txtPassword.Text;
+            command.Parameters.Add("NamaDepan", MySqlDbType.VarChar).Value = txtNamaDepan.Text;
+            command.Parameters.Add("NamaBelakang", MySqlDbType.VarChar).Value = txtNamaBelakang.Text;
+            command.Parameters.Add("DaftarSebagai", MySqlDbType.VarChar).Value = Sebagai;
             db.OpenConnection();
             if (CekUsername())
             {
@@ -70,6 +66,7 @@ namespace Ze_Starve
             {
                 if (command.ExecuteNonQuery() == 1)
                 {
+                    new DaftarAkunFoodshelter().Show();
                     MessageBox.Show("Akun berhasil dibuat!");
                 }
                 else
@@ -108,6 +105,9 @@ namespace Ze_Starve
                 return false;
             }
         }
+        private void DaftarAkun_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }
