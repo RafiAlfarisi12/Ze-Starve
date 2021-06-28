@@ -39,6 +39,8 @@ namespace Ze_Starve
 
         private void BtnFoodshelter_Click(object sender, EventArgs e)
         {
+            PanelFoodshelter.Visible = true;
+            PanelNotifikasi.Visible = false;
             LblSelectedFoodshelter.Visible = true;
             LblSelectedNotifikasi.Visible = false;
             LblSelectedAkun.Visible = false;
@@ -46,6 +48,8 @@ namespace Ze_Starve
 
         private void BtnNotifikasi_Click(object sender, EventArgs e)
         {
+            PanelFoodshelter.Visible = false;
+            PanelNotifikasi.Visible = true;
             LblSelectedFoodshelter.Visible = false;
             LblSelectedNotifikasi.Visible = true;
             LblSelectedAkun.Visible = false;
@@ -53,12 +57,29 @@ namespace Ze_Starve
 
         private void BtnAkun_Click(object sender, EventArgs e)
         {
+            PanelFoodshelter.Visible = false;
+            PanelNotifikasi.Visible = false;
             LblSelectedFoodshelter.Visible = false;
             LblSelectedNotifikasi.Visible = false;
             LblSelectedAkun.Visible = true;
         }
 
         private void HalamanUtamaFoodshelter_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblTambahAktivitas_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
