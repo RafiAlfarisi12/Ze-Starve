@@ -12,6 +12,7 @@ namespace Ze_Starve
 {
     public partial class DaftarAkunPenerima : Form
     {
+        KoneksiDatabase db = new KoneksiDatabase();
         public DaftarAkunPenerima()
         {
             InitializeComponent();
