@@ -1,18 +1,21 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ze_Starve.Penerima_Bantuan
+//Fauzan Reza Arnanda
+//1302194003
+
+namespace Ze_Starve
 {
-    class GetSetPenerima
+    class GetSetPenerima<T>
     {
         // Menginisialisasi Variable Penerima Bantuan
-        private string _username, NoHP, AddressPenerima, _email, _password;
+        private T _username, NoHP, AddressPenerima, _email, _password;
 
         // Membuat Data Penerima Bantuan Baru
-        public GetSetPenerima(string _username, string NoHP, string AddressPenerima, string _email, string _password)
+        public GetSetPenerima(T _username, T NoHP, T AddressPenerima, T _email, T _password)
         {
             this._username = _username;
             this.NoHP = NoHP;
@@ -22,61 +25,61 @@ namespace Ze_Starve.Penerima_Bantuan
         }
 
         // Mendapatkan data username
-        public String getUsername()
+        public T getUsername()
         {
             return _username;
         }
         // Menyimpan data username
-        public void setUsername(String username)
+        public void setUsername(T username)
         {
             this._username = username;
         }
 
         // Mendapatkan data Nomor HP
-        public String getNoHP()
+        public T getNoHP()
         {
             return NoHP;
         }
         // Menyimpan data Nomor HP
-        public void setNoHP(String NoHP)
+        public void setNoHP(T NoHP)
         {
             this.NoHP = NoHP;
         }
 
         // Mendapatkan data Address Pengguna
-        public String getAddressPenerima()
+        public T getAddressPenerima()
         {
             return AddressPenerima;
         }
         // Menyimpan data Nomor Address Pengguna
-        public void setAddressPenerima(String AddressPPenerima)
+        public void setAddressPenerima(T AddressPPenerima)
         {
             this.AddressPenerima = AddressPenerima;
         }
 
         // Mendapatkan data Email
-        public String getEmail()
+        public T getEmail()
         {
             return _email;
         }
         // Menyimpan data Email
-        public void setEmail(String email)
+        public void setEmail(T email)
         {
             this._email = email;
         }
 
         // Mendapatkan data Password
-        public String getPassword()
+        public T getPassword()
         {
             return _password;
         }
         // Menyimpan data Password
-        public void setPassword(String password)
+        public void setPassword(T password)
         {
             this._password = password;
         }
 
 
-
     }
 }
+
