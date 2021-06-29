@@ -34,13 +34,15 @@ namespace Ze_Starve
             this.BtnDaftarAkun = new System.Windows.Forms.Button();
             this.LblBelumPunyaAkunInLoginForm = new System.Windows.Forms.Label();
             this.LinkLabelLupaPassword = new System.Windows.Forms.LinkLabel();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.TxtPassword = new System.Windows.Forms.TextBox();
+            this.TxtUsername = new System.Windows.Forms.TextBox();
             this.LblLogin = new System.Windows.Forms.Label();
             this.BtnLogin = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.LblDaftarSebagai = new System.Windows.Forms.Label();
+            this.RButtonPenerima = new System.Windows.Forms.RadioButton();
+            this.RButtonDonatur = new System.Windows.Forms.RadioButton();
+            this.RButtonFoodshelter = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +50,7 @@ namespace Ze_Starve
             // 
             this.LblPasswordInLoginForm.AutoSize = true;
             this.LblPasswordInLoginForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblPasswordInLoginForm.Location = new System.Drawing.Point(388, 163);
+            this.LblPasswordInLoginForm.Location = new System.Drawing.Point(388, 151);
             this.LblPasswordInLoginForm.Name = "LblPasswordInLoginForm";
             this.LblPasswordInLoginForm.Size = new System.Drawing.Size(83, 20);
             this.LblPasswordInLoginForm.TabIndex = 19;
@@ -88,28 +90,28 @@ namespace Ze_Starve
             // 
             this.LinkLabelLupaPassword.AutoSize = true;
             this.LinkLabelLupaPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LinkLabelLupaPassword.Location = new System.Drawing.Point(387, 268);
+            this.LinkLabelLupaPassword.Location = new System.Drawing.Point(387, 261);
             this.LinkLabelLupaPassword.Name = "LinkLabelLupaPassword";
             this.LinkLabelLupaPassword.Size = new System.Drawing.Size(158, 25);
             this.LinkLabelLupaPassword.TabIndex = 15;
             this.LinkLabelLupaPassword.TabStop = true;
             this.LinkLabelLupaPassword.Text = "Lupa Password?";
             // 
-            // txtPassword
+            // TxtPassword
             // 
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(392, 186);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(379, 30);
-            this.txtPassword.TabIndex = 13;
+            this.TxtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPassword.Location = new System.Drawing.Point(392, 174);
+            this.TxtPassword.Name = "TxtPassword";
+            this.TxtPassword.Size = new System.Drawing.Size(379, 30);
+            this.TxtPassword.TabIndex = 13;
             // 
-            // txtUsername
+            // TxtUsername
             // 
-            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(392, 117);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(379, 30);
-            this.txtUsername.TabIndex = 12;
+            this.TxtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtUsername.Location = new System.Drawing.Point(392, 117);
+            this.TxtUsername.Name = "TxtUsername";
+            this.TxtUsername.Size = new System.Drawing.Size(379, 30);
+            this.TxtUsername.TabIndex = 12;
             // 
             // LblLogin
             // 
@@ -142,30 +144,58 @@ namespace Ze_Starve
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // comboBox1
+            // LblDaftarSebagai
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(392, 241);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 21;
+            this.LblDaftarSebagai.AutoSize = true;
+            this.LblDaftarSebagai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDaftarSebagai.Location = new System.Drawing.Point(389, 208);
+            this.LblDaftarSebagai.Name = "LblDaftarSebagai";
+            this.LblDaftarSebagai.Size = new System.Drawing.Size(130, 20);
+            this.LblDaftarSebagai.TabIndex = 22;
+            this.LblDaftarSebagai.Text = "Daftar Sebagai?";
             // 
-            // label1
+            // RButtonPenerima
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(401, 387);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "label1";
+            this.RButtonPenerima.AutoSize = true;
+            this.RButtonPenerima.Location = new System.Drawing.Point(393, 237);
+            this.RButtonPenerima.Name = "RButtonPenerima";
+            this.RButtonPenerima.Size = new System.Drawing.Size(89, 21);
+            this.RButtonPenerima.TabIndex = 23;
+            this.RButtonPenerima.TabStop = true;
+            this.RButtonPenerima.Text = "Penerima";
+            this.RButtonPenerima.UseVisualStyleBackColor = true;
+            // 
+            // RButtonDonatur
+            // 
+            this.RButtonDonatur.AutoSize = true;
+            this.RButtonDonatur.Location = new System.Drawing.Point(488, 237);
+            this.RButtonDonatur.Name = "RButtonDonatur";
+            this.RButtonDonatur.Size = new System.Drawing.Size(80, 21);
+            this.RButtonDonatur.TabIndex = 24;
+            this.RButtonDonatur.TabStop = true;
+            this.RButtonDonatur.Text = "Donatur";
+            this.RButtonDonatur.UseVisualStyleBackColor = true;
+            // 
+            // RButtonFoodshelter
+            // 
+            this.RButtonFoodshelter.AutoSize = true;
+            this.RButtonFoodshelter.Location = new System.Drawing.Point(574, 237);
+            this.RButtonFoodshelter.Name = "RButtonFoodshelter";
+            this.RButtonFoodshelter.Size = new System.Drawing.Size(104, 21);
+            this.RButtonFoodshelter.TabIndex = 25;
+            this.RButtonFoodshelter.TabStop = true;
+            this.RButtonFoodshelter.Text = "Foodshelter";
+            this.RButtonFoodshelter.UseVisualStyleBackColor = true;
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.RButtonFoodshelter);
+            this.Controls.Add(this.RButtonDonatur);
+            this.Controls.Add(this.RButtonPenerima);
+            this.Controls.Add(this.LblDaftarSebagai);
             this.Controls.Add(this.BtnLogin);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.LblPasswordInLoginForm);
@@ -173,8 +203,8 @@ namespace Ze_Starve
             this.Controls.Add(this.BtnDaftarAkun);
             this.Controls.Add(this.LblBelumPunyaAkunInLoginForm);
             this.Controls.Add(this.LinkLabelLupaPassword);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.TxtPassword);
+            this.Controls.Add(this.TxtUsername);
             this.Controls.Add(this.LblLogin);
             this.Name = "LoginForm";
             this.Text = "LoginForm";
@@ -192,13 +222,15 @@ namespace Ze_Starve
         private System.Windows.Forms.Button BtnDaftarAkun;
         private System.Windows.Forms.Label LblBelumPunyaAkunInLoginForm;
         private System.Windows.Forms.LinkLabel LinkLabelLupaPassword;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.TextBox TxtPassword;
+        private System.Windows.Forms.TextBox TxtUsername;
         private System.Windows.Forms.Label LblLogin;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button BtnLogin;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LblDaftarSebagai;
+        private System.Windows.Forms.RadioButton RButtonPenerima;
+        private System.Windows.Forms.RadioButton RButtonDonatur;
+        private System.Windows.Forms.RadioButton RButtonFoodshelter;
     }
 }
 

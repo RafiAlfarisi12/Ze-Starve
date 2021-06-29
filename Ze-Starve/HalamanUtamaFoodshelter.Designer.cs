@@ -40,23 +40,23 @@ namespace Ze_Starve
             this.LblFoodshelter = new System.Windows.Forms.Label();
             this.LblNamaFoodshelter = new System.Windows.Forms.Label();
             this.LblSelamatDatang = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PanelFoodshelter = new System.Windows.Forms.Panel();
             this.PanelNotifikasi = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.LblAktivitasFoodshelter = new System.Windows.Forms.Label();
-            this.LblStatistik = new System.Windows.Forms.Label();
-            this.LblTambahAktivitas = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.BtnAktivitasFoodshelter = new System.Windows.Forms.Button();
+            this.LblAktivitasFoodshelter = new System.Windows.Forms.Label();
             this.BtnStatistik = new System.Windows.Forms.Button();
             this.BtnTambahAktivitas = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.LblStatistik = new System.Windows.Forms.Label();
+            this.LblTambahAktivitas = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.PanelFoodshelter.SuspendLayout();
             this.PanelNotifikasi.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -182,9 +182,17 @@ namespace Ze_Starve
             this.LblSelamatDatang.Text = "Selamat Datang";
             this.LblSelamatDatang.Click += new System.EventHandler(this.LblSelamatDatang_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(11, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(80, 78);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // PanelFoodshelter
             // 
-            this.PanelFoodshelter.Controls.Add(this.PanelNotifikasi);
             this.PanelFoodshelter.Controls.Add(this.BtnAktivitasFoodshelter);
             this.PanelFoodshelter.Controls.Add(this.LblAktivitasFoodshelter);
             this.PanelFoodshelter.Controls.Add(this.BtnStatistik);
@@ -204,63 +212,12 @@ namespace Ze_Starve
             this.PanelNotifikasi.Controls.Add(this.button3);
             this.PanelNotifikasi.Controls.Add(this.label2);
             this.PanelNotifikasi.Controls.Add(this.label3);
-            this.PanelNotifikasi.Location = new System.Drawing.Point(167, 310);
+            this.PanelNotifikasi.Location = new System.Drawing.Point(196, 354);
             this.PanelNotifikasi.Name = "PanelNotifikasi";
             this.PanelNotifikasi.Size = new System.Drawing.Size(584, 448);
             this.PanelNotifikasi.TabIndex = 2;
             this.PanelNotifikasi.Visible = false;
             this.PanelNotifikasi.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(229, 166);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 30);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Statistik";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(43, 166);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 30);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Tambah Aktivitas";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // LblAktivitasFoodshelter
-            // 
-            this.LblAktivitasFoodshelter.BackColor = System.Drawing.SystemColors.Control;
-            this.LblAktivitasFoodshelter.Location = new System.Drawing.Point(413, 161);
-            this.LblAktivitasFoodshelter.Name = "LblAktivitasFoodshelter";
-            this.LblAktivitasFoodshelter.Size = new System.Drawing.Size(130, 45);
-            this.LblAktivitasFoodshelter.TabIndex = 12;
-            this.LblAktivitasFoodshelter.Text = "Aktivitas Foodshelter";
-            this.LblAktivitasFoodshelter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // LblStatistik
-            // 
-            this.LblStatistik.BackColor = System.Drawing.SystemColors.Control;
-            this.LblStatistik.Location = new System.Drawing.Point(229, 161);
-            this.LblStatistik.Name = "LblStatistik";
-            this.LblStatistik.Size = new System.Drawing.Size(130, 30);
-            this.LblStatistik.TabIndex = 7;
-            this.LblStatistik.Text = "Statistik";
-            this.LblStatistik.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // LblTambahAktivitas
-            // 
-            this.LblTambahAktivitas.BackColor = System.Drawing.SystemColors.Control;
-            this.LblTambahAktivitas.Location = new System.Drawing.Point(43, 161);
-            this.LblTambahAktivitas.Name = "LblTambahAktivitas";
-            this.LblTambahAktivitas.Size = new System.Drawing.Size(130, 30);
-            this.LblTambahAktivitas.TabIndex = 5;
-            this.LblTambahAktivitas.Text = "Tambah Aktivitas";
-            this.LblTambahAktivitas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.LblTambahAktivitas.Click += new System.EventHandler(this.LblTambahAktivitas_Click);
             // 
             // button2
             // 
@@ -282,6 +239,26 @@ namespace Ze_Starve
             this.button3.TabIndex = 16;
             this.button3.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(229, 166);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(130, 30);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Statistik";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.SystemColors.Control;
+            this.label3.Location = new System.Drawing.Point(43, 166);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(130, 30);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Tambah Aktivitas";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // BtnAktivitasFoodshelter
             // 
             this.BtnAktivitasFoodshelter.BackgroundImage = global::Ze_Starve.Properties.Resources.logoZStarve01;
@@ -291,6 +268,17 @@ namespace Ze_Starve
             this.BtnAktivitasFoodshelter.Size = new System.Drawing.Size(130, 130);
             this.BtnAktivitasFoodshelter.TabIndex = 13;
             this.BtnAktivitasFoodshelter.UseVisualStyleBackColor = true;
+            this.BtnAktivitasFoodshelter.Click += new System.EventHandler(this.BtnAktivitasFoodshelter_Click);
+            // 
+            // LblAktivitasFoodshelter
+            // 
+            this.LblAktivitasFoodshelter.BackColor = System.Drawing.SystemColors.Control;
+            this.LblAktivitasFoodshelter.Location = new System.Drawing.Point(413, 161);
+            this.LblAktivitasFoodshelter.Name = "LblAktivitasFoodshelter";
+            this.LblAktivitasFoodshelter.Size = new System.Drawing.Size(130, 45);
+            this.LblAktivitasFoodshelter.TabIndex = 12;
+            this.LblAktivitasFoodshelter.Text = "Aktivitas Foodshelter";
+            this.LblAktivitasFoodshelter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // BtnStatistik
             // 
@@ -313,20 +301,33 @@ namespace Ze_Starve
             this.BtnTambahAktivitas.UseVisualStyleBackColor = true;
             this.BtnTambahAktivitas.Click += new System.EventHandler(this.BtnTambahAktivitas_Click);
             // 
-            // pictureBox1
+            // LblStatistik
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(11, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 78);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.LblStatistik.BackColor = System.Drawing.SystemColors.Control;
+            this.LblStatistik.Location = new System.Drawing.Point(229, 161);
+            this.LblStatistik.Name = "LblStatistik";
+            this.LblStatistik.Size = new System.Drawing.Size(130, 30);
+            this.LblStatistik.TabIndex = 7;
+            this.LblStatistik.Text = "Statistik";
+            this.LblStatistik.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // LblTambahAktivitas
+            // 
+            this.LblTambahAktivitas.BackColor = System.Drawing.SystemColors.Control;
+            this.LblTambahAktivitas.Location = new System.Drawing.Point(43, 161);
+            this.LblTambahAktivitas.Name = "LblTambahAktivitas";
+            this.LblTambahAktivitas.Size = new System.Drawing.Size(130, 30);
+            this.LblTambahAktivitas.TabIndex = 5;
+            this.LblTambahAktivitas.Text = "Tambah Aktivitas";
+            this.LblTambahAktivitas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LblTambahAktivitas.Click += new System.EventHandler(this.LblTambahAktivitas_Click);
             // 
             // HalamanUtamaFoodshelter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(869, 450);
+            this.Controls.Add(this.PanelNotifikasi);
             this.Controls.Add(this.PanelFoodshelter);
             this.Controls.Add(this.panel1);
             this.Name = "HalamanUtamaFoodshelter";
@@ -334,9 +335,9 @@ namespace Ze_Starve
             this.Load += new System.EventHandler(this.HalamanUtamaFoodshelter_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.PanelFoodshelter.ResumeLayout(false);
             this.PanelNotifikasi.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
