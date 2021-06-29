@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 //Fauzan Reza Arnanda
 //1302194003
     
-namespace Ze_Starve.Penerima_Bantuan
+namespace Ze_Starve
 {
     class BarangBantuan
     {
@@ -26,7 +26,6 @@ namespace Ze_Starve.Penerima_Bantuan
             PecelLele,
             kolak,
             NasiSateMaranggi
-
         };
         public static string getKodeBarang(Barang inputbarang)
         {
