@@ -29,34 +29,37 @@ namespace Ze_Starve
         /// </summary>
         private void InitializeComponent()
         {
-            this.ListAktivitas = new System.Windows.Forms.ListView();
+            this.DataAktivitas = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.DataAktivitas)).BeginInit();
             this.SuspendLayout();
             // 
-            // ListAktivitas
+            // DataAktivitas
             // 
-            this.ListAktivitas.HideSelection = false;
-            this.ListAktivitas.Location = new System.Drawing.Point(12, 12);
-            this.ListAktivitas.Name = "ListAktivitas";
-            this.ListAktivitas.Size = new System.Drawing.Size(193, 337);
-            this.ListAktivitas.TabIndex = 0;
-            this.ListAktivitas.UseCompatibleStateImageBehavior = false;
-            this.ListAktivitas.SelectedIndexChanged += new System.EventHandler(this.ListAktivitas_SelectedIndexChanged);
+            this.DataAktivitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataAktivitas.Location = new System.Drawing.Point(73, 150);
+            this.DataAktivitas.Name = "DataAktivitas";
+            this.DataAktivitas.RowHeadersWidth = 51;
+            this.DataAktivitas.RowTemplate.Height = 24;
+            this.DataAktivitas.Size = new System.Drawing.Size(570, 266);
+            this.DataAktivitas.TabIndex = 0;
+            this.DataAktivitas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataAktivitas_CellContentClick);
             // 
             // AktivitasFoodshelter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.ListAktivitas);
+            this.Controls.Add(this.DataAktivitas);
             this.Name = "AktivitasFoodshelter";
             this.Text = "AktivitasFoodshelter";
             this.Load += new System.EventHandler(this.AktivitasFoodshelter_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DataAktivitas)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ListView ListAktivitas;
+        private System.Windows.Forms.DataGridView DataAktivitas;
     }
 }
