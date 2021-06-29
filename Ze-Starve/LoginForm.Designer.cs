@@ -39,6 +39,8 @@ namespace Ze_Starve
             this.LblLogin = new System.Windows.Forms.Label();
             this.BtnLogin = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,7 +67,7 @@ namespace Ze_Starve
             // BtnDaftarAkun
             // 
             this.BtnDaftarAkun.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDaftarAkun.Location = new System.Drawing.Point(525, 357);
+            this.BtnDaftarAkun.Location = new System.Drawing.Point(525, 387);
             this.BtnDaftarAkun.Name = "BtnDaftarAkun";
             this.BtnDaftarAkun.Size = new System.Drawing.Size(130, 34);
             this.BtnDaftarAkun.TabIndex = 17;
@@ -76,7 +78,7 @@ namespace Ze_Starve
             // LblBelumPunyaAkunInLoginForm
             // 
             this.LblBelumPunyaAkunInLoginForm.AutoSize = true;
-            this.LblBelumPunyaAkunInLoginForm.Location = new System.Drawing.Point(472, 322);
+            this.LblBelumPunyaAkunInLoginForm.Location = new System.Drawing.Point(472, 352);
             this.LblBelumPunyaAkunInLoginForm.Name = "LblBelumPunyaAkunInLoginForm";
             this.LblBelumPunyaAkunInLoginForm.Size = new System.Drawing.Size(236, 17);
             this.LblBelumPunyaAkunInLoginForm.TabIndex = 16;
@@ -86,7 +88,7 @@ namespace Ze_Starve
             // 
             this.LinkLabelLupaPassword.AutoSize = true;
             this.LinkLabelLupaPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LinkLabelLupaPassword.Location = new System.Drawing.Point(387, 231);
+            this.LinkLabelLupaPassword.Location = new System.Drawing.Point(387, 268);
             this.LinkLabelLupaPassword.Name = "LinkLabelLupaPassword";
             this.LinkLabelLupaPassword.Size = new System.Drawing.Size(158, 25);
             this.LinkLabelLupaPassword.TabIndex = 15;
@@ -122,7 +124,7 @@ namespace Ze_Starve
             // BtnLogin
             // 
             this.BtnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnLogin.Location = new System.Drawing.Point(525, 276);
+            this.BtnLogin.Location = new System.Drawing.Point(525, 306);
             this.BtnLogin.Name = "BtnLogin";
             this.BtnLogin.Size = new System.Drawing.Size(130, 34);
             this.BtnLogin.TabIndex = 20;
@@ -140,11 +142,30 @@ namespace Ze_Starve
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(392, 241);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 21;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(401, 387);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 17);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "label1";
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.BtnLogin);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.LblPasswordInLoginForm);
@@ -176,6 +197,8 @@ namespace Ze_Starve
         private System.Windows.Forms.Label LblLogin;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button BtnLogin;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
 

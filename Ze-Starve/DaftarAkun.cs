@@ -30,81 +30,23 @@ namespace Ze_Starve
 
         private void Btn_Selanjutnya_In_Daftar_Akun_Click(object sender, EventArgs e)
         {
-            MySqlCommand command = new MySqlCommand("INSERT INTO pengguna (Username, Password, NamaDepan, NamaBelakang, DaftarSebagai) VALUES (@Username,@Password,@NamaDepan,@NamaBelakang, @DaftarSebagai)", db.GetConnection());
-
-            String Sebagai = " ";
-            if (Rbutton_Input_Penerima.Checked)
+            if (RbuttonInputPenerima.Checked)
             {
-                Sebagai = "Penerima";
                 new DaftarAkunPenerima().Show();
                 this.Hide();
             }
-            else if (Rbutton_Input_Donatur.Checked)
+            else if (RbuttonInputDonatur.Checked)
             {
-                Sebagai = "Donatur";
                 new DaftarAkunDonatur().Show();
                 this.Hide();
             }
-            else if (Rbutton_Input_Foodshelter.Checked)
+            else if (RbuttonInputFoodshelter.Checked)
             {
-                Sebagai = "Foodshelter";
+                new DaftarAkunFoodshelter().Show();
                 this.Hide();
             }
-            command.Parameters.Add("Username", MySqlDbType.VarChar).Value = txtUsername.Text;
-            command.Parameters.Add("Password", MySqlDbType.VarChar).Value = txtPassword.Text;
-            command.Parameters.Add("NamaDepan", MySqlDbType.VarChar).Value = txtNamaDepan.Text;
-            command.Parameters.Add("NamaBelakang", MySqlDbType.VarChar).Value = txtNamaBelakang.Text;
-            command.Parameters.Add("DaftarSebagai", MySqlDbType.VarChar).Value = Sebagai;
-            db.OpenConnection();
-            if (CekUsername())
-            {
-                MessageBox.Show("Username sudah ada yang memakai, silahkan masukan username lainnya!");
-                new DaftarAkun().Show();
-                this.Hide();
-            }
-            else
-            {
-                if (command.ExecuteNonQuery() == 1)
-                {
-                    new DaftarAkunFoodshelter().Show();
-                    MessageBox.Show("Akun berhasil dibuat!");
-                }
-                else
-                {
-                    MessageBox.Show("Error");
-                    new DaftarAkun().Show();
-                    this.Hide();
-                }
-
-            }
-            db.CloseConnection();
         }
 
-        public Boolean CekUsername()
-        {
-            string username = txtUsername.Text;
-
-            DataTable table = new DataTable();
-
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
-
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `Pengguna` WHERE `Username` = @Username", db.GetConnection());
-
-            command.Parameters.Add("@Username", MySqlDbType.VarChar).Value = username;
-
-            adapter.SelectCommand = command;
-
-            adapter.Fill(table);
-
-            if (table.Rows.Count > 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
         private void DaftarAkun_Load(object sender, EventArgs e)
         {
 

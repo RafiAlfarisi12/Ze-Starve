@@ -9,7 +9,7 @@ namespace Ze_Starve
 {
     class KoneksiDatabase
     {
-        private MySqlConnection connection = new MySqlConnection("server = localhost; user id = root; database = ze_starve");
+        private MySqlConnection connection = new MySqlConnection("server = localhost; user id = root; database = Ze-starve");
 
         public void OpenConnection()
         {

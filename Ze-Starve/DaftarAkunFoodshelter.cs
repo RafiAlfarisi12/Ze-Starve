@@ -16,16 +16,6 @@ namespace Ze_Starve
     {
         KoneksiDatabase db = new KoneksiDatabase();
 
-        int IdFoodshelter { set; get; }
-        int IdPengguna { set; get; }
-        string NamaFoodshelter { set; get; }
-        string NoTelpFoodshelter { set; get; }
-        string AlamatFoodshelter { set; get; }
-        string NoRekeningFoodshelter { set; get; }
-        byte FotoLogoFoodshelter { set; get; }
-        byte FotoBukuTabungan { set; get; }
-        byte FotoKtp { set; get; }
-
         public DaftarAkunFoodshelter()
         {
             InitializeComponent();
@@ -44,7 +34,7 @@ namespace Ze_Starve
                 PictureLogoFoodshelter.Image = Image.FromFile(opf.FileName);
             }
         }
-
+        
         private void LinkUnggahFotoBukuTabungan_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             OpenFileDialog opf = new OpenFileDialog();
@@ -68,22 +58,24 @@ namespace Ze_Starve
         private void BtnSelesaiDaftarAkun_Click(object sender, EventArgs e)
         {
             MemoryStream ms = new MemoryStream();
-            byte[] imgLogoFooodShelter = ms.ToArray();
-            byte[] imgBukuTabungan = ms.ToArray();
-            byte[] imgKtp = ms.ToArray();
+            byte[] ImgLogoFooodShelter = ms.ToArray();
+            byte[] ImgBukuTabungan = ms.ToArray();
+            byte[] ImgKtp = ms.ToArray();
             
-            MySqlCommand command = new MySqlCommand("INSERT INTO penggunafoodshelter (NamaDepan, NamaBelakang, Username, Password, NamaFoodshelter, NoTelpFoodshelter, AlamatFoodshelter, NoRekeningFoodshelter, DeskripsiFoodshelter, FotoLogoFoodshelter, FotoBukuTabungan, FotoKtp) VALUES (@NamaDepan, @NamaBelakang, @Username, @Password, @NamaFoodshelter, @NoTelpFoodshelter, @AlamatFoodshelter, @NoRekeningFoodshelter, @DeskripsiFoodshelter, @FotoLogoFoodshelter, @FotoBukuTabungan, @FotoKtp)", db.GetConnection());
+            MySqlCommand command = new MySqlCommand("INSERT INTO penggunafoodshelter (NamaDepan, NamaBelakang, Username, Password, NamaFS, NoTelpFS, AlamatFS, NoRekeningFS, DeskripsiFS, FotoLogoFS, FotoBukuTabungan, FotoKtp) VALUES (@NamaDepan, @NamaBelakang, @Username, @Password, @NamaFS, @NoTelpFS, @AlamatFS, @NoRekeningFS, @DeskripsiFS, @FotoLogoFS, @FotoBukuTabungan, @FotoKtp)", db.GetConnection());
 
+            command.Parameters.Add("NamaDepan", MySqlDbType.VarChar).Value = TxtNamaDepan.Text;
+            command.Parameters.Add("NamaBelakang", MySqlDbType.VarChar).Value = TxtNamaBelakang.Text;
             command.Parameters.Add("Username", MySqlDbType.VarChar).Value = TxtUsername.Text;
             command.Parameters.Add("Password", MySqlDbType.VarChar).Value = TxtPassword.Text;
-            command.Parameters.Add("NamaFoodshelter", MySqlDbType.VarChar).Value = TxtNamaFoodshelter.Text;
-            command.Parameters.Add("NoTelpFoodshelter", MySqlDbType.VarChar).Value = TxtNoTelpFoodshelter.Text;
-            command.Parameters.Add("AlamatFoodshelter", MySqlDbType.VarChar).Value = TxtAlamatFoodshelter.Text;
-            command.Parameters.Add("NoRekeningFoodshelter", MySqlDbType.VarChar).Value = TxtNoRekeningFoodshelter.Text;
-            command.Parameters.Add("DeskripsiFoodshelter", MySqlDbType.VarChar).Value = TxtDeskripsiFoodshelter.Text;
-            command.Parameters.Add("FotoLogoFoodShelter", MySqlDbType.VarChar).Value = imgLogoFooodShelter;
-            command.Parameters.Add("FotoBukuTabungan", MySqlDbType.VarChar).Value = imgBukuTabungan;
-            command.Parameters.Add("FotoKtp", MySqlDbType.VarChar).Value = imgKtp;
+            command.Parameters.Add("NamaFS", MySqlDbType.VarChar).Value = TxtNamaFoodshelter.Text;
+            command.Parameters.Add("NoTelpFS", MySqlDbType.VarChar).Value = TxtNoTelpFoodshelter.Text;
+            command.Parameters.Add("AlamatFS", MySqlDbType.VarChar).Value = TxtAlamatFoodshelter.Text;
+            command.Parameters.Add("NoRekeningFS", MySqlDbType.VarChar).Value = TxtNoRekeningFoodshelter.Text;
+            command.Parameters.Add("DeskripsiFS", MySqlDbType.VarChar).Value = TxtDeskripsiFoodshelter.Text;
+            command.Parameters.Add("FotoLogoFS", MySqlDbType.VarChar).Value = ImgLogoFooodShelter;
+            command.Parameters.Add("FotoBukuTabungan", MySqlDbType.VarChar).Value = ImgBukuTabungan;
+            command.Parameters.Add("FotoKtp", MySqlDbType.VarChar).Value = ImgKtp;
             db.OpenConnection();
 
             if (CekUsername())
