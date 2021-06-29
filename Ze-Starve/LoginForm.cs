@@ -22,35 +22,64 @@ namespace Ze_Starve
 
         public void Login()
         {
-            DataTable table = new DataTable();
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
-            MySqlCommand command = new MySqlCommand("SELECT username, password, DaftarSebagai FROM pengguna WHERE username = '" + txtUsername.Text + "' AND password = '" + txtPassword.Text + "'", db.GetConnection());
-            adapter.SelectCommand = command;
-            adapter.Fill(table);
-            if (table.Rows.Count > 0)
+            if (RButtonPenerima.Checked)
             {
-                foreach (DataRow dr in table.Rows)
+                DataTable table = new DataTable();
+                MySqlDataAdapter adapter = new MySqlDataAdapter();
+                MySqlCommand Penerima = new MySqlCommand("SELECT username, password FROM penggunapenerima WHERE username = '" + TxtUsername.Text + "' AND password = '" + TxtPassword.Text + "'", db.GetConnection());
+                adapter.SelectCommand = Penerima;
+                adapter.Fill(table);
+                if (table.Rows.Count > 0)
                 {
-                    if (dr["DaftarSebagai"].ToString() == "Foodshelter")
-                    {
-                        new HalamanUtamaFoodshelter().Show();
-                        this.Hide();
-                    }
-                    else if (dr["DaftarSebagai"].ToString() == "Donatur")
-                    {
-                        new HalamanUtamaDonatur().Show();
-                        this.Hide();
-                    }
+                    new HalamanUtamaDonatur().Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Username atau Password salah!");
                 }
             }
-            else
+            else if (RButtonDonatur.Checked)
             {
-                MessageBox.Show("Username atau Password salah!");
+                DataTable table = new DataTable();
+                MySqlDataAdapter adapter = new MySqlDataAdapter();
+                MySqlCommand Donatur = new MySqlCommand("SELECT username, password FROM penggunadonatur WHERE username = '" + TxtUsername.Text + "' AND password = '" + TxtPassword.Text + "'", db.GetConnection());
+                adapter.SelectCommand = Donatur;
+                adapter.Fill(table);
+
+                if (table.Rows.Count > 0)
+                {
+                    new HalamanUtamaDonatur().Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Username atau Password salah!");
+                }
+                
+            }
+            else if (RButtonFoodshelter.Checked)
+            {
+                DataTable table = new DataTable();
+                MySqlDataAdapter adapter = new MySqlDataAdapter();
+                MySqlCommand Foodshelter = new MySqlCommand("SELECT username, password FROM penggunafoodshelter WHERE username = '" + TxtUsername.Text + "' AND password = '" + TxtPassword.Text + "'", db.GetConnection());
+                adapter.SelectCommand = Foodshelter;
+                adapter.Fill(table);
+
+                if (table.Rows.Count > 0)
+                {
+                    new HalamanUtamaFoodshelter().Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Username atau Password salah!");
+                }
             }
         }
         private void LoginForm_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void BtnLogin_Click(object sender, EventArgs e)

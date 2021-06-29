@@ -103,5 +103,11 @@ namespace Ze_Starve
             new TambahAktivitasFoodshelter().Show();
             this.Hide();
         }
+
+        private void BtnAktivitasFoodshelter_Click(object sender, EventArgs e)
+        {
+            new AktivitasFoodshelter().Show();
+            this.Hide();
+        }
     }
 }

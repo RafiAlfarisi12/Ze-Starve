@@ -179,9 +179,10 @@ namespace Ze_Starve
             // 
             // PictureLogoFoodshelter
             // 
-            this.PictureLogoFoodshelter.Location = new System.Drawing.Point(51, 35);
+            this.PictureLogoFoodshelter.Location = new System.Drawing.Point(50, 35);
             this.PictureLogoFoodshelter.Name = "PictureLogoFoodshelter";
             this.PictureLogoFoodshelter.Size = new System.Drawing.Size(216, 216);
+            this.PictureLogoFoodshelter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PictureLogoFoodshelter.TabIndex = 35;
             this.PictureLogoFoodshelter.TabStop = false;
             this.PictureLogoFoodshelter.Click += new System.EventHandler(this.PictureLogoFoodshelter_Click);
