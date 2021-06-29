@@ -15,6 +15,7 @@ namespace Ze_Starve
     public partial class DaftarAkunFoodshelter : Form
     {
         KoneksiDatabase db = new KoneksiDatabase();
+        Login fs = new Login();
 
         public DaftarAkunFoodshelter()
         {
@@ -62,7 +63,7 @@ namespace Ze_Starve
             byte[] ImgBukuTabungan = ms.ToArray();
             byte[] ImgKtp = ms.ToArray();
             
-            MySqlCommand command = new MySqlCommand("INSERT INTO penggunafoodshelter (NamaDepan, NamaBelakang, Username, Password, NamaFS, NoTelpFS, AlamatFS, NoRekeningFS, DeskripsiFS, FotoLogoFS, FotoBukuTabungan, FotoKtp) VALUES (@NamaDepan, @NamaBelakang, @Username, @Password, @NamaFS, @NoTelpFS, @AlamatFS, @NoRekeningFS, @DeskripsiFS, @FotoLogoFS, @FotoBukuTabungan, @FotoKtp)", db.GetConnection());
+            MySqlCommand command = new MySqlCommand("INSERT INTO penggunafoodshelter (NamaDepan, NamaBelakang, Username, Password, NamaFS, NoTelpFS, AlamatFS, NoRekeningFS, DeskripsiFS, FotoLogoFS, FotoBukuTabungan, FotoKtp) VALUES (NamaDepan, NamaBelakang, @Username, @Password, @NamaFS, @NoTelpFS, @AlamatFS, @NoRekeningFS, @DeskripsiFS, @FotoLogoFS, @FotoBukuTabungan, @FotoKtp)", db.GetConnection());
 
             command.Parameters.Add("NamaDepan", MySqlDbType.VarChar).Value = TxtNamaDepan.Text;
             command.Parameters.Add("NamaBelakang", MySqlDbType.VarChar).Value = TxtNamaBelakang.Text;

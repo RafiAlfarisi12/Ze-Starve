@@ -113,7 +113,7 @@ namespace Ze_Starve
             this.BtnSelesaiDaftarAkun.Name = "BtnSelesaiDaftarAkun";
             this.BtnSelesaiDaftarAkun.Size = new System.Drawing.Size(93, 30);
             this.BtnSelesaiDaftarAkun.TabIndex = 4;
-            this.BtnSelesaiDaftarAkun.Text = "Selasai";
+            this.BtnSelesaiDaftarAkun.Text = "Selesai";
             this.BtnSelesaiDaftarAkun.UseVisualStyleBackColor = true;
             this.BtnSelesaiDaftarAkun.Click += new System.EventHandler(this.BtnSelesaiDaftarAkun_Click);
             // 

@@ -133,6 +133,7 @@
       <DependentUpon>HalamanUtamaFoodshelter.cs</DependentUpon>
     </Compile>
     <Compile Include="KoneksiDatabase.cs" />
+    <Compile Include="Login.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
