@@ -72,29 +72,68 @@ namespace Ze_Starve
             byte[] imgBukuTabungan = ms.ToArray();
             byte[] imgKtp = ms.ToArray();
             
-            MySqlCommand command = new MySqlCommand("INSERT INTO penggunafoodshelter (NamaFoodshelter, NoTelpFoodshelter, AlamatFoodshelter, NoRekeningFoodshelter, DeskripsiFoodshelter, FotoLogoFoodshelter, FotoBukuTabungan, FotoKtp) VALUES (@NamaFoodshelter, @NoTelpFoodshelter, @AlamatFoodshelter, @NoRekeningFoodshelter, @DeskripsiFoodshelter, @FotoLogoFoodshelter, @FotoBukuTabungan, @FotoKtp)", db.GetConnection());
-            
-            command.Parameters.Add("@NamaFoodshelter", MySqlDbType.VarChar).Value = TxtNamaFoodshelter.Text;
-            command.Parameters.Add("@NoTelpFoodshelter", MySqlDbType.VarChar).Value = TxtNoTelpFoodshelter.Text;
-            command.Parameters.Add("@AlamatFoodshelter", MySqlDbType.VarChar).Value = TxtAlamatFoodshelter.Text;
-            command.Parameters.Add("@NoRekeningFoodshelter", MySqlDbType.VarChar).Value = TxtNoRekeningFoodshelter.Text;
-            command.Parameters.Add("@DeskripsiFoodshelter", MySqlDbType.VarChar).Value = TxtDeskripsiFoodshelter.Text;
-            command.Parameters.Add("@FotoLogoFoodShelter", MySqlDbType.VarChar).Value = imgLogoFooodShelter;
-            command.Parameters.Add("@FotoBukuTabungan", MySqlDbType.VarChar).Value = imgBukuTabungan;
-            command.Parameters.Add("@FotoKtp", MySqlDbType.VarChar).Value = imgKtp;
-            db.OpenConnection();
-            if (command.ExecuteNonQuery() == 1)
-            {
-                MessageBox.Show("Akun berhasil dibuat!");
-                new HalamanUtamaFoodshelter().Show();
-                this.Hide();
+            MySqlCommand command = new MySqlCommand("INSERT INTO penggunafoodshelter (NamaDepan, NamaBelakang, Username, Password, NamaFoodshelter, NoTelpFoodshelter, AlamatFoodshelter, NoRekeningFoodshelter, DeskripsiFoodshelter, FotoLogoFoodshelter, FotoBukuTabungan, FotoKtp) VALUES (@NamaDepan, @NamaBelakang, @Username, @Password, @NamaFoodshelter, @NoTelpFoodshelter, @AlamatFoodshelter, @NoRekeningFoodshelter, @DeskripsiFoodshelter, @FotoLogoFoodshelter, @FotoBukuTabungan, @FotoKtp)", db.GetConnection());
 
+            command.Parameters.Add("Username", MySqlDbType.VarChar).Value = TxtUsername.Text;
+            command.Parameters.Add("Password", MySqlDbType.VarChar).Value = TxtPassword.Text;
+            command.Parameters.Add("NamaFoodshelter", MySqlDbType.VarChar).Value = TxtNamaFoodshelter.Text;
+            command.Parameters.Add("NoTelpFoodshelter", MySqlDbType.VarChar).Value = TxtNoTelpFoodshelter.Text;
+            command.Parameters.Add("AlamatFoodshelter", MySqlDbType.VarChar).Value = TxtAlamatFoodshelter.Text;
+            command.Parameters.Add("NoRekeningFoodshelter", MySqlDbType.VarChar).Value = TxtNoRekeningFoodshelter.Text;
+            command.Parameters.Add("DeskripsiFoodshelter", MySqlDbType.VarChar).Value = TxtDeskripsiFoodshelter.Text;
+            command.Parameters.Add("FotoLogoFoodShelter", MySqlDbType.VarChar).Value = imgLogoFooodShelter;
+            command.Parameters.Add("FotoBukuTabungan", MySqlDbType.VarChar).Value = imgBukuTabungan;
+            command.Parameters.Add("FotoKtp", MySqlDbType.VarChar).Value = imgKtp;
+            db.OpenConnection();
+
+            if (CekUsername())
+            {
+                MessageBox.Show("Username sudah ada yang memakai, silahkan masukan username lainnya!");
+                new DaftarAkun().Show();
+                this.Hide();
             }
             else
             {
-                MessageBox.Show("Error");
+                if (command.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("Akun berhasil dibuat!");
+                    new HalamanUtamaFoodshelter().Show();
+                    this.Hide();
+
+                }
+                else
+                {
+                    MessageBox.Show("Error");
+                }
             }
+            
             db.CloseConnection(); 
+        }
+
+        public Boolean CekUsername()
+        {
+            string username = TxtUsername.Text;
+
+            DataTable table = new DataTable();
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+
+            MySqlCommand command = new MySqlCommand("SELECT * FROM penggunafoodshelter WHERE Username = @Username", db.GetConnection());
+
+            command.Parameters.Add("@Username", MySqlDbType.VarChar).Value = username;
+
+            adapter.SelectCommand = command;
+
+            adapter.Fill(table);
+
+            if (table.Rows.Count > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         private void PictureLogoFoodshelter_Click(object sender, EventArgs e)
