@@ -132,6 +132,12 @@
     <Compile Include="HalamanUtamaFoodshelter.Designer.cs">
       <DependentUpon>HalamanUtamaFoodshelter.cs</DependentUpon>
     </Compile>
+    <Compile Include="HalamanUtamaPenerima.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HalamanUtamaPenerima.Designer.cs">
+      <DependentUpon>HalamanUtamaPenerima.cs</DependentUpon>
+    </Compile>
     <Compile Include="KoneksiDatabase.cs" />
     <Compile Include="Login.cs" />
     <Compile Include="LoginForm.cs">
@@ -213,6 +219,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Statistik.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

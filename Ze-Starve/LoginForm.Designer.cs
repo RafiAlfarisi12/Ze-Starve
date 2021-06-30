@@ -43,6 +43,7 @@ namespace Ze_Starve
             this.RButtonPenerima = new System.Windows.Forms.RadioButton();
             this.RButtonDonatur = new System.Windows.Forms.RadioButton();
             this.RButtonFoodshelter = new System.Windows.Forms.RadioButton();
+            this.ShowPassword = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -104,6 +105,7 @@ namespace Ze_Starve
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.Size = new System.Drawing.Size(379, 30);
             this.TxtPassword.TabIndex = 13;
+            this.TxtPassword.TextChanged += new System.EventHandler(this.TxtPassword_TextChanged);
             // 
             // TxtUsername
             // 
@@ -187,11 +189,24 @@ namespace Ze_Starve
             this.RButtonFoodshelter.Text = "Foodshelter";
             this.RButtonFoodshelter.UseVisualStyleBackColor = true;
             // 
+            // ShowPassword
+            // 
+            this.ShowPassword.AutoSize = true;
+            this.ShowPassword.BackColor = System.Drawing.Color.White;
+            this.ShowPassword.Location = new System.Drawing.Point(703, 179);
+            this.ShowPassword.Name = "ShowPassword";
+            this.ShowPassword.Size = new System.Drawing.Size(64, 21);
+            this.ShowPassword.TabIndex = 26;
+            this.ShowPassword.Text = "Show";
+            this.ShowPassword.UseVisualStyleBackColor = false;
+            this.ShowPassword.CheckedChanged += new System.EventHandler(this.ShowPassword_CheckedChanged);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(846, 450);
+            this.Controls.Add(this.ShowPassword);
             this.Controls.Add(this.RButtonFoodshelter);
             this.Controls.Add(this.RButtonDonatur);
             this.Controls.Add(this.RButtonPenerima);
@@ -231,6 +246,7 @@ namespace Ze_Starve
         private System.Windows.Forms.RadioButton RButtonPenerima;
         private System.Windows.Forms.RadioButton RButtonDonatur;
         private System.Windows.Forms.RadioButton RButtonFoodshelter;
+        private System.Windows.Forms.CheckBox ShowPassword;
     }
 }
 

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Ze_Starve
+﻿namespace Ze_Starve
 {
     class PenggunaFoodshelter
     {
@@ -45,7 +39,7 @@ namespace Ze_Starve
         private string Password
         {
             get { return _Password; }
-            set { _Password = value;}
+            set { _Password = value; }
         }
         private string NamaFS
         {

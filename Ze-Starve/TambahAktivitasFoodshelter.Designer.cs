@@ -160,7 +160,7 @@ namespace Ze_Starve
             // 
             // BtnMulai
             // 
-            this.BtnMulai.Location = new System.Drawing.Point(171, 391);
+            this.BtnMulai.Location = new System.Drawing.Point(169, 330);
             this.BtnMulai.Name = "BtnMulai";
             this.BtnMulai.Size = new System.Drawing.Size(95, 30);
             this.BtnMulai.TabIndex = 33;
@@ -170,12 +170,13 @@ namespace Ze_Starve
             // 
             // BtnBatal
             // 
-            this.BtnBatal.Location = new System.Drawing.Point(56, 391);
+            this.BtnBatal.Location = new System.Drawing.Point(54, 330);
             this.BtnBatal.Name = "BtnBatal";
             this.BtnBatal.Size = new System.Drawing.Size(95, 30);
             this.BtnBatal.TabIndex = 34;
             this.BtnBatal.Text = "Batal";
             this.BtnBatal.UseVisualStyleBackColor = true;
+            this.BtnBatal.Click += new System.EventHandler(this.BtnBatal_Click);
             // 
             // PictureLogoFoodshelter
             // 
@@ -286,7 +287,7 @@ namespace Ze_Starve
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(773, 450);
+            this.ClientSize = new System.Drawing.Size(773, 414);
             this.Controls.Add(this.LblJamSelesai);
             this.Controls.Add(this.LblJamMulai);
             this.Controls.Add(this.BoxJamSelesai);

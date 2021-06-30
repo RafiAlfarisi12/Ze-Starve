@@ -1,6 +1,4 @@
-﻿using MySql.Data.MySqlClient;
-using System;
-using System.Data;
+﻿using System;
 using System.Data.OleDb;
 using System.Windows.Forms;
 
@@ -8,40 +6,31 @@ namespace Ze_Starve
 {
     public partial class DaftarAkun : Form
     {
-        public class Login
-        {
-            int IdPengguna { set; get; }
-            string Username { set; get; }
-            string Password { set; get; }
-            string NamaDepan { set; get; }
-            string NamaBelakang { set; get; }
-            string DaftarSebagai { set; get; }
-        };
-
-        KoneksiDatabase db = new KoneksiDatabase();
-
         public DaftarAkun()
         {
             InitializeComponent();
         }
-        OleDbConnection con = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=db_users.mdb");
-        OleDbCommand cmd = new OleDbCommand();
-        OleDbDataAdapter da = new OleDbDataAdapter();
 
         private void Btn_Selanjutnya_In_Daftar_Akun_Click(object sender, EventArgs e)
         {
+            // Kondisi 1 : jika radio button penerima yang di pilih.
             if (RbuttonInputPenerima.Checked)
             {
+                // Menuju form DaftarAkunPenerima().
                 new DaftarAkunPenerima().Show();
                 this.Hide();
             }
+            // Kondisi 2 : jika radio button donatur yang di pilih.
             else if (RbuttonInputDonatur.Checked)
             {
+                // Menuju form DaftarAkunDonatur().
                 new DaftarAkunDonatur().Show();
                 this.Hide();
             }
+            // Kondisi 1 : jika radio button foodshelter yang di pilih.
             else if (RbuttonInputFoodshelter.Checked)
             {
+                // Menuju form DaftarAkunFoodshelter().
                 new DaftarAkunFoodshelter().Show();
                 this.Hide();
             }
