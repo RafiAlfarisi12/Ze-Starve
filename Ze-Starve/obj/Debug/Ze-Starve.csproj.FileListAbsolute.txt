@@ -38,3 +38,43 @@ D:\Ze-Starve\Ze-Starve\obj\Debug\Ze_Starve.DaftarAkunDonatur.resources
 D:\Ze-Starve\Ze-Starve\obj\Debug\Ze_Starve.DaftarAkunPenerima.resources
 D:\Ze-Starve\Ze-Starve\obj\Debug\Ze_Starve.TambahAktivitasFoodshelter.resources
 D:\Ze-Starve\Ze-Starve\obj\Debug\Ze_Starve.AktivitasFoodshelter.resources
+C:\Users\M.Rafi Alfarisi\Documents\git\Ze-Starve\bin\Debug\Ze-Starve.exe.config
+C:\Users\M.Rafi Alfarisi\Documents\git\Ze-Starve\bin\Debug\Ze-Starve.exe
+C:\Users\M.Rafi Alfarisi\Documents\git\Ze-Starve\bin\Debug\Ze-Starve.pdb
+C:\Users\M.Rafi Alfarisi\Documents\git\Ze-Starve\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\M.Rafi Alfarisi\Documents\git\Ze-Starve\bin\Debug\Google.Protobuf.dll
+C:\Users\M.Rafi Alfarisi\Documents\git\Ze-Starve\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\M.Rafi Alfarisi\Documents\git\Ze-Starve\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\M.Rafi Alfarisi\Documents\git\Ze-Starve\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\M.Rafi Alfarisi\Documents\git\Ze-Starve\bin\Debug\MySql.Data.dll
+C:\Users\M.Rafi Alfarisi\Documents\git\Ze-Starve\bin\Debug\System.Buffers.dll
+C:\Users\M.Rafi Alfarisi\Documents\git\Ze-Starve\bin\Debug\System.Memory.dll
+C:\Users\M.Rafi Alfarisi\Documents\git\Ze-Starve\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\M.Rafi Alfarisi\Documents\git\Ze-Starve\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\M.Rafi Alfarisi\Documents\git\Ze-Starve\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\M.Rafi Alfarisi\Documents\git\Ze-Starve\bin\Debug\Zstandard.Net.dll
+C:\Users\M.Rafi Alfarisi\Documents\git\Ze-Starve\bin\Debug\Google.Protobuf.pdb
+C:\Users\M.Rafi Alfarisi\Documents\git\Ze-Starve\bin\Debug\Google.Protobuf.xml
+C:\Users\M.Rafi Alfarisi\Documents\git\Ze-Starve\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\M.Rafi Alfarisi\Documents\git\Ze-Starve\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\M.Rafi Alfarisi\Documents\git\Ze-Starve\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\M.Rafi Alfarisi\Documents\git\Ze-Starve\bin\Debug\MySql.Data.xml
+C:\Users\M.Rafi Alfarisi\Documents\git\Ze-Starve\bin\Debug\System.Buffers.xml
+C:\Users\M.Rafi Alfarisi\Documents\git\Ze-Starve\bin\Debug\System.Memory.xml
+C:\Users\M.Rafi Alfarisi\Documents\git\Ze-Starve\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\M.Rafi Alfarisi\Documents\git\Ze-Starve\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\M.Rafi Alfarisi\Documents\git\Ze-Starve\obj\Debug\Ze-Starve.csproj.AssemblyReference.cache
+C:\Users\M.Rafi Alfarisi\Documents\git\Ze-Starve\obj\Debug\Ze_Starve.AktivitasFoodshelter.resources
+C:\Users\M.Rafi Alfarisi\Documents\git\Ze-Starve\obj\Debug\Ze_Starve.DaftarAkun.resources
+C:\Users\M.Rafi Alfarisi\Documents\git\Ze-Starve\obj\Debug\Ze_Starve.DaftarAkunDonatur.resources
+C:\Users\M.Rafi Alfarisi\Documents\git\Ze-Starve\obj\Debug\Ze_Starve.DaftarAkunFoodshelter.resources
+C:\Users\M.Rafi Alfarisi\Documents\git\Ze-Starve\obj\Debug\Ze_Starve.DaftarAkunPenerima.resources
+C:\Users\M.Rafi Alfarisi\Documents\git\Ze-Starve\obj\Debug\Ze_Starve.HalamanUtamaFoodshelter.resources
+C:\Users\M.Rafi Alfarisi\Documents\git\Ze-Starve\obj\Debug\Ze_Starve.LoginForm.resources
+C:\Users\M.Rafi Alfarisi\Documents\git\Ze-Starve\obj\Debug\Ze_Starve.Properties.Resources.resources
+C:\Users\M.Rafi Alfarisi\Documents\git\Ze-Starve\obj\Debug\Ze_Starve.TambahAktivitasFoodshelter.resources
+C:\Users\M.Rafi Alfarisi\Documents\git\Ze-Starve\obj\Debug\Ze-Starve.csproj.GenerateResource.cache
+C:\Users\M.Rafi Alfarisi\Documents\git\Ze-Starve\obj\Debug\Ze-Starve.csproj.CoreCompileInputs.cache
+C:\Users\M.Rafi Alfarisi\Documents\git\Ze-Starve\obj\Debug\Ze-Starve.csproj.CopyComplete
+C:\Users\M.Rafi Alfarisi\Documents\git\Ze-Starve\obj\Debug\Ze-Starve.exe
+C:\Users\M.Rafi Alfarisi\Documents\git\Ze-Starve\obj\Debug\Ze-Starve.pdb
