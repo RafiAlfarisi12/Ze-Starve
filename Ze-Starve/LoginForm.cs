@@ -16,6 +16,7 @@ namespace Ze_Starve
             InitializeComponent();
         }
 
+        // Method login.
         public void Login()
         {
             // Kondisi 1 : jika radio button penerima yang di pilih.
@@ -92,6 +93,8 @@ namespace Ze_Starve
                 }
             }
         }
+
+        // Mengatur button Login.
         protected void BtnLogin_Click(object sender, EventArgs e)
         {
             // Mengambil value dari method Login().
@@ -103,6 +106,7 @@ namespace Ze_Starve
             new DaftarAkun().Show();
             this.Hide();
         }
+
         private void TxtPassword_TextChanged(object sender, EventArgs e)
         {
             // Kondisi 1 : jika chekbox show password di klik maka akan menampilkan password.
@@ -129,12 +133,8 @@ namespace Ze_Starve
                 TxtPassword.UseSystemPasswordChar = true;
             }
         }
+
         private void LoginForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
 
         }

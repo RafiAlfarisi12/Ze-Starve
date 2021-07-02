@@ -94,6 +94,7 @@ namespace Ze_Starve
             this.Btn_Kembali_In_Daftar_Akun.TabIndex = 28;
             this.Btn_Kembali_In_Daftar_Akun.Text = "Kembali";
             this.Btn_Kembali_In_Daftar_Akun.UseVisualStyleBackColor = true;
+            this.Btn_Kembali_In_Daftar_Akun.Click += new System.EventHandler(this.Btn_Kembali_In_Daftar_Akun_Click);
             // 
             // Btn_Selanjutnya_In_Daftar_Akun
             // 
@@ -130,7 +131,6 @@ namespace Ze_Starve
             this.Controls.Add(this.Btn_Selanjutnya_In_Daftar_Akun);
             this.Name = "DaftarAkun";
             this.Text = "DaftarAkun";
-            this.Load += new System.EventHandler(this.DaftarAkun_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

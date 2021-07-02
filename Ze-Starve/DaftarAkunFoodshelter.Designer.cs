@@ -29,6 +29,7 @@ namespace Ze_Starve
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.LinkUnggahFotoLogoFoodshelter = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -59,8 +60,28 @@ namespace Ze_Starve
             this.TxtUsername = new System.Windows.Forms.TextBox();
             this.TxtNamaBelakang = new System.Windows.Forms.TextBox();
             this.TxtNamaDepan = new System.Windows.Forms.TextBox();
+            this.ErrNamaDepan = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrNamaBelakang = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrUser = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrPass = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrConfPass = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrNamaFS = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrNoTelpFS = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrAlamatFS = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrNoRekFS = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrDesFS = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureLogoFoodshelter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrNamaDepan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrNamaBelakang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrPass)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrConfPass)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrNamaFS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrNoTelpFS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrAlamatFS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrNoRekFS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrDesFS)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -78,7 +99,6 @@ namespace Ze_Starve
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(220, 454);
             this.panel1.TabIndex = 26;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // LinkUnggahFotoLogoFoodshelter
             // 
@@ -106,6 +126,7 @@ namespace Ze_Starve
             this.BtnKembali.TabIndex = 5;
             this.BtnKembali.Text = "Kembali";
             this.BtnKembali.UseVisualStyleBackColor = true;
+            this.BtnKembali.Click += new System.EventHandler(this.BtnKembali_Click);
             // 
             // BtnSelesaiDaftarAkun
             // 
@@ -155,7 +176,6 @@ namespace Ze_Starve
             this.PictureLogoFoodshelter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PictureLogoFoodshelter.TabIndex = 0;
             this.PictureLogoFoodshelter.TabStop = false;
-            this.PictureLogoFoodshelter.Click += new System.EventHandler(this.PictureLogoFoodshelter_Click);
             // 
             // LblAlamatFoodshelter
             // 
@@ -217,43 +237,53 @@ namespace Ze_Starve
             // 
             // TxtNamaFoodshelter
             // 
+            this.TxtNamaFoodshelter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNamaFoodshelter.Location = new System.Drawing.Point(531, 43);
             this.TxtNamaFoodshelter.Multiline = true;
             this.TxtNamaFoodshelter.Name = "TxtNamaFoodshelter";
             this.TxtNamaFoodshelter.Size = new System.Drawing.Size(230, 30);
             this.TxtNamaFoodshelter.TabIndex = 37;
+            this.TxtNamaFoodshelter.TextChanged += new System.EventHandler(this.TxtNamaFoodshelter_TextChanged);
             // 
             // TxtNoTelpFoodshelter
             // 
+            this.TxtNoTelpFoodshelter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNoTelpFoodshelter.Location = new System.Drawing.Point(531, 112);
             this.TxtNoTelpFoodshelter.Multiline = true;
             this.TxtNoTelpFoodshelter.Name = "TxtNoTelpFoodshelter";
             this.TxtNoTelpFoodshelter.Size = new System.Drawing.Size(230, 30);
             this.TxtNoTelpFoodshelter.TabIndex = 38;
+            this.TxtNoTelpFoodshelter.TextChanged += new System.EventHandler(this.TxtNoTelpFoodshelter_TextChanged);
             // 
             // TxtAlamatFoodshelter
             // 
+            this.TxtAlamatFoodshelter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtAlamatFoodshelter.Location = new System.Drawing.Point(531, 183);
             this.TxtAlamatFoodshelter.Multiline = true;
             this.TxtAlamatFoodshelter.Name = "TxtAlamatFoodshelter";
             this.TxtAlamatFoodshelter.Size = new System.Drawing.Size(230, 30);
             this.TxtAlamatFoodshelter.TabIndex = 39;
+            this.TxtAlamatFoodshelter.TextChanged += new System.EventHandler(this.TxtAlamatFoodshelter_TextChanged);
             // 
             // TxtNoRekeningFoodshelter
             // 
+            this.TxtNoRekeningFoodshelter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNoRekeningFoodshelter.Location = new System.Drawing.Point(531, 254);
             this.TxtNoRekeningFoodshelter.Multiline = true;
             this.TxtNoRekeningFoodshelter.Name = "TxtNoRekeningFoodshelter";
             this.TxtNoRekeningFoodshelter.Size = new System.Drawing.Size(230, 30);
             this.TxtNoRekeningFoodshelter.TabIndex = 40;
+            this.TxtNoRekeningFoodshelter.TextChanged += new System.EventHandler(this.TxtNoRekeningFoodshelter_TextChanged);
             // 
             // TxtDeskripsiFoodshelter
             // 
+            this.TxtDeskripsiFoodshelter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtDeskripsiFoodshelter.Location = new System.Drawing.Point(532, 329);
             this.TxtDeskripsiFoodshelter.Multiline = true;
             this.TxtDeskripsiFoodshelter.Name = "TxtDeskripsiFoodshelter";
             this.TxtDeskripsiFoodshelter.Size = new System.Drawing.Size(230, 101);
             this.TxtDeskripsiFoodshelter.TabIndex = 41;
+            this.TxtDeskripsiFoodshelter.TextChanged += new System.EventHandler(this.TxtDeskripsiFoodshelter_TextChanged);
             // 
             // TxtConfirmPassword
             // 
@@ -262,6 +292,7 @@ namespace Ze_Starve
             this.TxtConfirmPassword.Name = "TxtConfirmPassword";
             this.TxtConfirmPassword.Size = new System.Drawing.Size(230, 30);
             this.TxtConfirmPassword.TabIndex = 51;
+            this.TxtConfirmPassword.TextChanged += new System.EventHandler(this.TxtConfirmPassword_TextChanged);
             // 
             // LblConfirmPassword
             // 
@@ -320,6 +351,7 @@ namespace Ze_Starve
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.Size = new System.Drawing.Size(230, 30);
             this.TxtPassword.TabIndex = 45;
+            this.TxtPassword.TextChanged += new System.EventHandler(this.TxtPassword_TextChanged);
             // 
             // TxtUsername
             // 
@@ -328,6 +360,7 @@ namespace Ze_Starve
             this.TxtUsername.Name = "TxtUsername";
             this.TxtUsername.Size = new System.Drawing.Size(230, 30);
             this.TxtUsername.TabIndex = 44;
+            this.TxtUsername.TextChanged += new System.EventHandler(this.TxtUsername_TextChanged);
             // 
             // TxtNamaBelakang
             // 
@@ -336,6 +369,7 @@ namespace Ze_Starve
             this.TxtNamaBelakang.Name = "TxtNamaBelakang";
             this.TxtNamaBelakang.Size = new System.Drawing.Size(230, 30);
             this.TxtNamaBelakang.TabIndex = 43;
+            this.TxtNamaBelakang.TextChanged += new System.EventHandler(this.TxtNamaBelakang_TextChanged);
             // 
             // TxtNamaDepan
             // 
@@ -344,6 +378,47 @@ namespace Ze_Starve
             this.TxtNamaDepan.Name = "TxtNamaDepan";
             this.TxtNamaDepan.Size = new System.Drawing.Size(230, 30);
             this.TxtNamaDepan.TabIndex = 42;
+            this.TxtNamaDepan.TextChanged += new System.EventHandler(this.TxtNamaDepan_TextChanged);
+            // 
+            // ErrNamaDepan
+            // 
+            this.ErrNamaDepan.ContainerControl = this;
+            // 
+            // ErrNamaBelakang
+            // 
+            this.ErrNamaBelakang.ContainerControl = this;
+            // 
+            // ErrUser
+            // 
+            this.ErrUser.ContainerControl = this;
+            // 
+            // ErrPass
+            // 
+            this.ErrPass.ContainerControl = this;
+            // 
+            // ErrConfPass
+            // 
+            this.ErrConfPass.ContainerControl = this;
+            // 
+            // ErrNamaFS
+            // 
+            this.ErrNamaFS.ContainerControl = this;
+            // 
+            // ErrNoTelpFS
+            // 
+            this.ErrNoTelpFS.ContainerControl = this;
+            // 
+            // ErrAlamatFS
+            // 
+            this.ErrAlamatFS.ContainerControl = this;
+            // 
+            // ErrNoRekFS
+            // 
+            this.ErrNoRekFS.ContainerControl = this;
+            // 
+            // ErrDesFS
+            // 
+            this.ErrDesFS.ContainerControl = this;
             // 
             // DaftarAkunFoodshelter
             // 
@@ -378,6 +453,16 @@ namespace Ze_Starve
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureLogoFoodshelter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrNamaDepan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrNamaBelakang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrPass)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrConfPass)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrNamaFS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrNoTelpFS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrAlamatFS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrNoRekFS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrDesFS)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -414,5 +499,15 @@ namespace Ze_Starve
         private System.Windows.Forms.TextBox TxtUsername;
         private System.Windows.Forms.TextBox TxtNamaBelakang;
         private System.Windows.Forms.TextBox TxtNamaDepan;
+        private System.Windows.Forms.ErrorProvider ErrNamaDepan;
+        private System.Windows.Forms.ErrorProvider ErrNamaBelakang;
+        private System.Windows.Forms.ErrorProvider ErrUser;
+        private System.Windows.Forms.ErrorProvider ErrPass;
+        private System.Windows.Forms.ErrorProvider ErrConfPass;
+        private System.Windows.Forms.ErrorProvider ErrNamaFS;
+        private System.Windows.Forms.ErrorProvider ErrNoTelpFS;
+        private System.Windows.Forms.ErrorProvider ErrAlamatFS;
+        private System.Windows.Forms.ErrorProvider ErrNoRekFS;
+        private System.Windows.Forms.ErrorProvider ErrDesFS;
     }
 }

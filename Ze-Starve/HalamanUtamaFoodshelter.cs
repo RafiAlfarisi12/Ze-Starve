@@ -6,7 +6,7 @@ namespace Ze_Starve
 {
     public partial class HalamanUtamaFoodshelter : Form
     {
-        // Koneksi database.
+        // API koneksi database.
         KoneksiDatabase db = new KoneksiDatabase();
 
         public HalamanUtamaFoodshelter()
@@ -14,16 +14,27 @@ namespace Ze_Starve
             InitializeComponent();
         }
 
+        // Mengatur button tambah aktivitas
         private void BtnTambahAktivitas_Click(object sender, EventArgs e)
         {
-            // Jika button tambah aktivitas di klik maka akan menuju form TambahAktivitasFoodshelter().
+            // Menuju form TambahAktivitasFoodshelter.
             new TambahAktivitasFoodshelter().Show();
             this.Hide();
         }
+
+        // Mengatur button aktivitas foodshelter
         private void BtnAktivitasFoodshelter_Click(object sender, EventArgs e)
         {
-            // Jika button aktivitas foodshelter di klik maka akan menuju form AktivitasFoodshelter().
+            // Menuju form AktivitasFoodshelter.
             new AktivitasFoodshelter().Show();
+            this.Hide();
+        }
+
+        // Mengatur button logout
+        private void BtnLogout_Click(object sender, EventArgs e)
+        {
+            // Menuju form LoginForm.
+            new LoginForm().Show();
             this.Hide();
         }
     }

@@ -11,6 +11,7 @@ namespace Ze_Starve
             InitializeComponent();
         }
 
+        // Mengatur button selanjutnya.
         private void Btn_Selanjutnya_In_Daftar_Akun_Click(object sender, EventArgs e)
         {
             // Kondisi 1 : jika radio button penerima yang di pilih.
@@ -36,9 +37,12 @@ namespace Ze_Starve
             }
         }
 
-        private void DaftarAkun_Load(object sender, EventArgs e)
+        // Mengatur button kembali.
+        private void Btn_Kembali_In_Daftar_Akun_Click(object sender, EventArgs e)
         {
-
+            // Menuju form LoginForm().
+            new LoginForm().Show();
+            this.Hide();
         }
     }
 }
