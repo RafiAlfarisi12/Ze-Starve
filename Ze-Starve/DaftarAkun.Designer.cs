@@ -131,6 +131,7 @@ namespace Ze_Starve
             this.Controls.Add(this.Btn_Selanjutnya_In_Daftar_Akun);
             this.Name = "DaftarAkun";
             this.Text = "DaftarAkun";
+            this.Load += new System.EventHandler(this.DaftarAkun_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

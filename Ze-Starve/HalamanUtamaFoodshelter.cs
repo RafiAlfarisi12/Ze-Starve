@@ -37,5 +37,10 @@ namespace Ze_Starve
             new LoginForm().Show();
             this.Hide();
         }
+
+        private void PageFoodshelter_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

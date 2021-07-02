@@ -213,5 +213,10 @@ namespace Ze_Starve
                 ErrDescKegiatan.SetError(TxtLokFS, null);
             }
         }
+
+        private void TambahAktivitasFoodshelter_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

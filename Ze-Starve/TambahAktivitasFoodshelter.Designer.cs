@@ -312,6 +312,7 @@ namespace Ze_Starve
             this.Controls.Add(this.TxtNamaFS);
             this.Name = "TambahAktivitasFoodshelter";
             this.Text = "TambahAktivitasFoodshelter";
+            this.Load += new System.EventHandler(this.TambahAktivitasFoodshelter_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ErrNamaFS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrDescKegiatan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErrMenuMakanan)).EndInit();

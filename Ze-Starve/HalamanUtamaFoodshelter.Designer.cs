@@ -31,17 +31,17 @@ namespace Ze_Starve
         {
             this.TabHalamanFoodshelter = new System.Windows.Forms.TabControl();
             this.PageFoodshelter = new System.Windows.Forms.TabPage();
+            this.BtnAktivitasFoodshelter = new System.Windows.Forms.Button();
+            this.BtnTambahAktivitas = new System.Windows.Forms.Button();
             this.LblAktivitasFoodshelter = new System.Windows.Forms.Label();
             this.LblTambahAktivitas = new System.Windows.Forms.Label();
             this.PageAkun = new System.Windows.Forms.TabPage();
-            this.LblBantuan = new System.Windows.Forms.Label();
-            this.LblEditAkun = new System.Windows.Forms.Label();
-            this.LblLogout = new System.Windows.Forms.Label();
-            this.BtnAktivitasFoodshelter = new System.Windows.Forms.Button();
-            this.BtnTambahAktivitas = new System.Windows.Forms.Button();
             this.BtnLogout = new System.Windows.Forms.Button();
+            this.LblLogout = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.BtnEditAkun = new System.Windows.Forms.Button();
+            this.LblBantuan = new System.Windows.Forms.Label();
+            this.LblEditAkun = new System.Windows.Forms.Label();
             this.TabHalamanFoodshelter.SuspendLayout();
             this.PageFoodshelter.SuspendLayout();
             this.PageAkun.SuspendLayout();
@@ -70,6 +70,29 @@ namespace Ze_Starve
             this.PageFoodshelter.TabIndex = 0;
             this.PageFoodshelter.Text = "Foodshelter";
             this.PageFoodshelter.UseVisualStyleBackColor = true;
+            this.PageFoodshelter.Click += new System.EventHandler(this.PageFoodshelter_Click);
+            // 
+            // BtnAktivitasFoodshelter
+            // 
+            this.BtnAktivitasFoodshelter.BackgroundImage = global::Ze_Starve.Properties.Resources.logoZStarve01;
+            this.BtnAktivitasFoodshelter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnAktivitasFoodshelter.Location = new System.Drawing.Point(231, 37);
+            this.BtnAktivitasFoodshelter.Name = "BtnAktivitasFoodshelter";
+            this.BtnAktivitasFoodshelter.Size = new System.Drawing.Size(130, 131);
+            this.BtnAktivitasFoodshelter.TabIndex = 19;
+            this.BtnAktivitasFoodshelter.UseVisualStyleBackColor = true;
+            this.BtnAktivitasFoodshelter.Click += new System.EventHandler(this.BtnAktivitasFoodshelter_Click);
+            // 
+            // BtnTambahAktivitas
+            // 
+            this.BtnTambahAktivitas.BackgroundImage = global::Ze_Starve.Properties.Resources.Icon_Tambah;
+            this.BtnTambahAktivitas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnTambahAktivitas.Location = new System.Drawing.Point(46, 37);
+            this.BtnTambahAktivitas.Name = "BtnTambahAktivitas";
+            this.BtnTambahAktivitas.Size = new System.Drawing.Size(130, 131);
+            this.BtnTambahAktivitas.TabIndex = 16;
+            this.BtnTambahAktivitas.UseVisualStyleBackColor = true;
+            this.BtnTambahAktivitas.Click += new System.EventHandler(this.BtnTambahAktivitas_Click);
             // 
             // LblAktivitasFoodshelter
             // 
@@ -107,58 +130,6 @@ namespace Ze_Starve
             this.PageAkun.Text = "Akun";
             this.PageAkun.UseVisualStyleBackColor = true;
             // 
-            // LblBantuan
-            // 
-            this.LblBantuan.BackColor = System.Drawing.SystemColors.Control;
-            this.LblBantuan.Location = new System.Drawing.Point(232, 167);
-            this.LblBantuan.Name = "LblBantuan";
-            this.LblBantuan.Size = new System.Drawing.Size(130, 31);
-            this.LblBantuan.TabIndex = 19;
-            this.LblBantuan.Text = "Pusat Bantuan";
-            this.LblBantuan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // LblEditAkun
-            // 
-            this.LblEditAkun.BackColor = System.Drawing.SystemColors.Control;
-            this.LblEditAkun.Location = new System.Drawing.Point(46, 167);
-            this.LblEditAkun.Name = "LblEditAkun";
-            this.LblEditAkun.Size = new System.Drawing.Size(130, 31);
-            this.LblEditAkun.TabIndex = 18;
-            this.LblEditAkun.Text = "Edit Akun";
-            this.LblEditAkun.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // LblLogout
-            // 
-            this.LblLogout.BackColor = System.Drawing.SystemColors.Control;
-            this.LblLogout.Location = new System.Drawing.Point(420, 167);
-            this.LblLogout.Name = "LblLogout";
-            this.LblLogout.Size = new System.Drawing.Size(130, 31);
-            this.LblLogout.TabIndex = 23;
-            this.LblLogout.Text = "Logout";
-            this.LblLogout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // BtnAktivitasFoodshelter
-            // 
-            this.BtnAktivitasFoodshelter.BackgroundImage = global::Ze_Starve.Properties.Resources.logoZStarve01;
-            this.BtnAktivitasFoodshelter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnAktivitasFoodshelter.Location = new System.Drawing.Point(231, 37);
-            this.BtnAktivitasFoodshelter.Name = "BtnAktivitasFoodshelter";
-            this.BtnAktivitasFoodshelter.Size = new System.Drawing.Size(130, 131);
-            this.BtnAktivitasFoodshelter.TabIndex = 19;
-            this.BtnAktivitasFoodshelter.UseVisualStyleBackColor = true;
-            this.BtnAktivitasFoodshelter.Click += new System.EventHandler(this.BtnAktivitasFoodshelter_Click);
-            // 
-            // BtnTambahAktivitas
-            // 
-            this.BtnTambahAktivitas.BackgroundImage = global::Ze_Starve.Properties.Resources.Icon_Tambah;
-            this.BtnTambahAktivitas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnTambahAktivitas.Location = new System.Drawing.Point(46, 37);
-            this.BtnTambahAktivitas.Name = "BtnTambahAktivitas";
-            this.BtnTambahAktivitas.Size = new System.Drawing.Size(130, 131);
-            this.BtnTambahAktivitas.TabIndex = 16;
-            this.BtnTambahAktivitas.UseVisualStyleBackColor = true;
-            this.BtnTambahAktivitas.Click += new System.EventHandler(this.BtnTambahAktivitas_Click);
-            // 
             // BtnLogout
             // 
             this.BtnLogout.BackgroundImage = global::Ze_Starve.Properties.Resources.logout;
@@ -169,6 +140,16 @@ namespace Ze_Starve
             this.BtnLogout.TabIndex = 24;
             this.BtnLogout.UseVisualStyleBackColor = true;
             this.BtnLogout.Click += new System.EventHandler(this.BtnLogout_Click);
+            // 
+            // LblLogout
+            // 
+            this.LblLogout.BackColor = System.Drawing.SystemColors.Control;
+            this.LblLogout.Location = new System.Drawing.Point(420, 167);
+            this.LblLogout.Name = "LblLogout";
+            this.LblLogout.Size = new System.Drawing.Size(130, 31);
+            this.LblLogout.TabIndex = 23;
+            this.LblLogout.Text = "Logout";
+            this.LblLogout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button1
             // 
@@ -188,6 +169,26 @@ namespace Ze_Starve
             this.BtnEditAkun.Name = "BtnEditAkun";
             this.BtnEditAkun.Size = new System.Drawing.Size(130, 131);
             this.BtnEditAkun.TabIndex = 22;
+            // 
+            // LblBantuan
+            // 
+            this.LblBantuan.BackColor = System.Drawing.SystemColors.Control;
+            this.LblBantuan.Location = new System.Drawing.Point(232, 167);
+            this.LblBantuan.Name = "LblBantuan";
+            this.LblBantuan.Size = new System.Drawing.Size(130, 31);
+            this.LblBantuan.TabIndex = 19;
+            this.LblBantuan.Text = "Pusat Bantuan";
+            this.LblBantuan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // LblEditAkun
+            // 
+            this.LblEditAkun.BackColor = System.Drawing.SystemColors.Control;
+            this.LblEditAkun.Location = new System.Drawing.Point(46, 167);
+            this.LblEditAkun.Name = "LblEditAkun";
+            this.LblEditAkun.Size = new System.Drawing.Size(130, 31);
+            this.LblEditAkun.TabIndex = 18;
+            this.LblEditAkun.Text = "Edit Akun";
+            this.LblEditAkun.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // HalamanUtamaFoodshelter
             // 

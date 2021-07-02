@@ -156,16 +156,16 @@ namespace Ze_Starve
         // Method teknik defensive programming untuk mengecek nama depan memiliki karakter lebih dari 16 atau tidak.
         public Boolean CekNamaDepan()
         {
-            string nama = TxtNamaDepan.Text;
+            string NamaDepan = TxtNamaDepan.Text;
             // Kondisi 1 : jika nama memiliki lebih dari 16 karakter.
-            if (nama.Length > 16)
+            if (NamaDepan.Length > 16)
             {
                 return true;
             }
             // Kondisi 2 : kondisi lainnya.
             else
             {
-                return true;
+                return false;
             }
         }
 
@@ -173,9 +173,9 @@ namespace Ze_Starve
         public Boolean CekNamaBelakang()
         {
             // Membuat variabel nama;
-            string nama = TxtNamaBelakang.Text;
+            string NamaBelakang = TxtNamaBelakang.Text;
             // Kondisi 1 : jika nama memiliki karakter lebih dari 16.
-            if (nama.Length > 16)
+            if (NamaBelakang.Length > 16)
             {
                 return true;
             }

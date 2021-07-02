@@ -26,8 +26,9 @@ namespace Ze_Starve
                 DataTable table = new DataTable();
                 // Membuat objek adapter.
                 MySqlDataAdapter adapter = new MySqlDataAdapter();
-                // Mengambil data pada tabel penggunapenerima pada database.
-                MySqlCommand Penerima = new MySqlCommand("SELECT username, password FROM penggunapenerima WHERE username = '" + TxtUsername.Text + "' AND password = '" + TxtPassword.Text + "'", db.GetConnection());
+                // API mengambil data pada tabel penggunapenerima pada database.
+                MySqlCommand Penerima = new MySqlCommand("SELECT username, password FROM penggunapenerima WHERE username = '" + TxtUsername.Text + 
+                    "' AND password = '" + TxtPassword.Text + "'", db.GetConnection());
                 adapter.SelectCommand = Penerima;
                 adapter.Fill(table);
                 // Kondisi 1 : jika data ada dalam tabel penggunapenerima.
@@ -51,7 +52,8 @@ namespace Ze_Starve
                 // Membuat objek adapter.
                 MySqlDataAdapter adapter = new MySqlDataAdapter();
                 // Mengambil data pada tabel penggunadonatur pada database.
-                MySqlCommand Donatur = new MySqlCommand("SELECT username, password FROM penggunadonatur WHERE username = '" + TxtUsername.Text + "' AND password = '" + TxtPassword.Text + "'", db.GetConnection());
+                MySqlCommand Donatur = new MySqlCommand("SELECT username, password FROM penggunadonatur WHERE username = '" + TxtUsername.Text + "' " +
+                    "AND password = '" + TxtPassword.Text + "'", db.GetConnection());
                 adapter.SelectCommand = Donatur;
                 adapter.Fill(table);
                 // Kondisi 1 : jika data ada dalam tabel penggunadonatur.

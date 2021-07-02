@@ -28,7 +28,7 @@ namespace Ze_Starve
                 new DaftarAkunDonatur().Show();
                 this.Hide();
             }
-            // Kondisi 1 : jika radio button foodshelter yang di pilih.
+            // Kondisi 3 : jika radio button foodshelter yang di pilih.
             else if (RbuttonInputFoodshelter.Checked)
             {
                 // Menuju form DaftarAkunFoodshelter().
@@ -43,6 +43,11 @@ namespace Ze_Starve
             // Menuju form LoginForm().
             new LoginForm().Show();
             this.Hide();
+        }
+
+        private void DaftarAkun_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
