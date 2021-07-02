@@ -4,25 +4,25 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.OleDb;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Ze_Starve
 {
     public partial class DaftarAkunDonatur : Form
     {
+        // Relasi ke database.
         KoneksiDatabase db = new KoneksiDatabase();
+
         public DaftarAkunDonatur()
         {
             InitializeComponent();
         }
-        //Connector ke databases
-        OleDbConnection con = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=db_users.mdb");
-        OleDbCommand cmd = new OleDbCommand();
-        OleDbDataAdapter da = new OleDbDataAdapter();
         private void DaftarAkunDonatur_Load(object sender, EventArgs e)
         {
 
@@ -77,7 +77,8 @@ namespace Ze_Starve
         {
 
         }
-        //Mengatur tombol reset untuk mengosongkan text entry dan menonaktifkan pilihan gaji.
+
+        // Mengatur tombol reset untuk mengosongkan text entry dan menonaktifkan pilihan gaji.
         private void resetButton_Click(object sender, EventArgs e)
         {
             ndepanEntry.Clear();
@@ -86,56 +87,61 @@ namespace Ze_Starve
             passEntry.Clear();
             nikEntry.Clear();
             pekerjaanEntry.Clear();
-            gajiRadio1.Checked = false;
-            gajiRadio2.Checked = false;
-            gajiRadio3.Checked = false;
-            gajiRadio4.Checked = false;
+            gajiEntry.Clear();
         }
-        //Mengatur tombol selesai untuk menyelesaikan pendaftaran akun.
+
+        // Mengatur tombol selesai untuk menyelesaikan pendaftaran akun.
         private void nextButton_Click(object sender, EventArgs e)
         {
-            //Kondisi gagal 1 : jika nik tidak sama dengan 16 karakter.
+            // Kondisi 1 : Jika nik tidak sama dengan 16 karakter.
             if (nikEntry.Text.Length != 16)
             {
                 MessageBox.Show("Nomor NIK anda tidak valid");
             }
-            //Kondisi gagal 2 : jika masih ada yang kosong
+            // Kondisi 2 : Jika masih ada yang kosong.
             else if (pekerjaanEntry.Text.Equals("") || nikEntry.Text.Equals("") || passEntry.Text.Equals("") ||
-                    userEntry.Text.Equals("") || passEntry.Text.Equals("") || ndepanEntry.Text.Equals("") || nbelakangEntry.Text.Equals(""))
+                    userEntry.Text.Equals("") || passEntry.Text.Equals("") || ndepanEntry.Text.Equals("") || nbelakangEntry.Text.Equals("") ||
+                    gajiEntry.Text.Equals(""))
             {
                 MessageBox.Show("Data Anda masih kosong");
             }
-            //Kondisi gagal 3 : jika password kurang dari 6 karakter.
+            // Kondisi 3 : Jika password kurang dari 6 karakter.
             else if (passEntry.Text.Length < 6)
             {
                 MessageBox.Show("Password minimal 6 karakter");
             }
-            //Kondisi berhasil.
+            // Kondisi 4 : Kondisi 1, 2, dan 3 tidak terpenuhi.
             else if (nikEntry.Text.Length == 16 && !pekerjaanEntry.Text.Equals("") && passEntry.Text.Length >= 6)
             {
-                MessageBox.Show("Selamat, Akun anda berhasil didaftarkan");
-                new HalamanUtamaDonatur().Show();
-                this.Hide();
-                MySqlCommand command = new MySqlCommand("INSERT INTO donatur (namaD, namaB, username, pass, nik, pekerjaan, gaji) " +
-                    "VALUES (@namaD, @namaB, @username, @pass, @nik, @pekerjaan, @gaji)", 
-                    db.GetConnection());
-
-                command.Parameters.Add("namaD", MySqlDbType.VarChar).Value = ndepanEntry.Text;
-                command.Parameters.Add("namaB", MySqlDbType.VarChar).Value = nbelakangEntry.Text;
-                command.Parameters.Add("user", MySqlDbType.VarChar).Value = userEntry.Text;
-                command.Parameters.Add("pass", MySqlDbType.VarChar).Value = passEntry.Text;
-                command.Parameters.Add("nik", MySqlDbType.VarChar).Value = nikEntry.Text;
-                command.Parameters.Add("pekerjaan", MySqlDbType.VarChar).Value = pekerjaanEntry.Text;
-                command.Parameters.Add("gaji", MySqlDbType.VarChar).Value = gajiBox.Select;
+                // Teknik 3 : API beserta desainnya.
+                // Mengirim data ke database sql untuk mendaftarkan akun baru.
                 db.OpenConnection();
+                MySqlCommand command = new MySqlCommand("INSERT INTO donatur(id_donatur, namaD, namaB, username, pass, nik, pekerjaan, gaji) " +
+                "VALUES(NULL, '" + ndepanEntry.Text + "', '" + nbelakangEntry.Text + "', '" + userEntry.Text + "', '" +
+                "" + passEntry.Text + "', '" + nikEntry.Text + "', '" + pekerjaanEntry.Text + "', '" + gajiEntry.Text + "')", db.GetConnection());
+                if (command.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("Selamat, Akun anda berhasil didaftarkan");
+                    new HalamanUtamaDonatur().Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Daftar akun error. Periksa kembali data Anda");
+                }
                 db.CloseConnection();
             }
         }
-        //Mengatur kembali untuk membatalkan pendaftaran akun.
+        // Mengatur kembali untuk membatalkan pendaftaran akun.
         private void backButton_Click(object sender, EventArgs e)
         {
             new DaftarAkun().Show();
             this.Hide();
+        }
+
+        private void gajiRadio3_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
